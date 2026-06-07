@@ -24,12 +24,9 @@ normanfellows.github.io
 │     └── Thesis
 │
 └── Repository
-      ├── projects/
-      ├── concepts/
-      ├── chronology/
-      ├── bibliography/
-      ├── thesis/
-      └── images/
-
-
-
+    ├── projects/
+    ├── concepts/
+    ├── chronology/
+    ├── bibliography/
+    ├── thesis/
+    └── images/
