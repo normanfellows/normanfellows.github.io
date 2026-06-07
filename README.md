@@ -2,9 +2,7 @@
 <html>
 <body>
 
-<h2>Links to published work</h2>
-
-<p>Click the thumbnails:—</p>
+<h2>Site map</h2>
 
 <a href="https://github.com/normanfellows/normanfellows.github.io/blob/main/images/item_27162-site_map.png"><img src="images/item_27162-site_map.png" alt="Site map" style="width:1048px;height:710px;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
