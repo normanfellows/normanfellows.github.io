@@ -21,4 +21,6 @@ normanfellows.github.io
     └── images/
 ```
 
+[Site map](https://github.com/normanfellows/normanfellows.github.io/blob/main/images/item_27162-site_map.png)
+
 Return to website:— https://normanfellows.github.io
