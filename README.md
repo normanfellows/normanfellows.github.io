@@ -23,4 +23,6 @@ normanfellows.github.io
 
 [Site map](https://github.com/normanfellows/normanfellows.github.io/blob/main/images/item_27162-site_map.png)
 
+[Wiki](https://github.com/normanfellows/normanfellows.github.io/wiki)
+
 Return to website:— https://normanfellows.github.io
