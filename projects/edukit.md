@@ -1,4 +1,4 @@
-# ARCHI: Something between placeholder, proposition, and unformed architectural state
+# EDUKIT
 
 I’ve had a fairly thorough look, and I can’t find any convincing trace of a 1995 project by Cedric Price specifically called “Archi”.
 
