@@ -5,7 +5,7 @@ normanfellows.github.io
 ├── Website
 │     └── Introduction
 │
-├── Wiki
+├── [Wiki](https://github.com/normanfellows/normanfellows.github.io/wiki)
 │     ├── Projects
 │     ├── Concepts
 │     ├── Chronology
