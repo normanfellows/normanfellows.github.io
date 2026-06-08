@@ -19,7 +19,7 @@
 - [Edukit](projects/edukit.md)
 - [Domestikit](projects/domestikit.md)
 - [Atom](projects/atom.md)
-- [Magnet](projects/magnet.md)
+- [Dukeries Thinkbelt](projects/magnetdukeries_thinkbelt.md)
 
 ### Concepts
 
