@@ -6,8 +6,8 @@
 
 ## Wiki
 
-- [Projects](https://github.com/normanfellows/normanfellows.github.io/wiki/Projects)
-- Concepts * Chronology
+- [Projects](wiki/Projects)
+- Concepts
 - Chronology
 - Bibliography
 - Thesis
