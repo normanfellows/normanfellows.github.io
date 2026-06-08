@@ -1,5 +1,7 @@
 # DUKERIES THINKBELT
 
+[Learn More](https://normanfellows.github.io/nf-dukeries-thinkbelt/)
+
 https://normanfellows.github.io/nf-dukeries-thinkbelt/
 
 
