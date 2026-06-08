@@ -20,10 +20,10 @@
 - [Domestikit](projects/domestikit.md)
 - [Dukeries Thinkbelt](projects/dukeries_thinkbelt.md)
 - [Edukit](projects/edukit.md)
-- [Eurothink](projects/dukeries_thinkbelt.md)
-- [Extraterrestrial](projects/domestikit.md)
-- [IFPRI 2](projects/atom_uk.md)
-- [OXBRIDGE COMMUNIT COLLEGE](projects/atom_uk.md)
+- [Eurothink](projects/eurothinkb.md)
+- [Extraterrestrial](projects/extraterrrestrial.md)
+- [IFPRI 2](projects/ifpri_2.md)
+- [Oxbridge Community College](projects/oxbridge_community_college.md)
 
 ### Concepts
 
