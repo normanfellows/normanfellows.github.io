@@ -16,10 +16,14 @@
 
 ### Projects
 
-- [Edukit](projects/edukit.md)
+- [Atom UK](projects/atom_uk.md)
 - [Domestikit](projects/domestikit.md)
-- [Atom](projects/atom.md)
 - [Dukeries Thinkbelt](projects/dukeries_thinkbelt.md)
+- [Edukit](projects/edukit.md)
+- [Eurothink](projects/dukeries_thinkbelt.md)
+- [Extraterrestrial](projects/domestikit.md)
+- [IFPRI 2](projects/atom_uk.md)
+- [OXBRIDGE COMMUNIT COLLEGE](projects/atom_uk.md)
 
 ### Concepts
 
