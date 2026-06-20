@@ -1,6 +1,6 @@
 # DUKERIES THINKBELT
 
-<img width="640px" height="480px" alt="train_arriving" src="https://github.com/user-attachments/assets/35d8f76a-ac80-475e-8f7a-d50472438b90" />
+<img width="640px" height="480px" alt="train_arriving" src="https://github.com/normanfellows/nf-dukeries-thinkbelt/blob/main/gifs/item_27163%20-%20train_arriving.gif" />
 
 ● item_27163 - train_arriving.gif
 
