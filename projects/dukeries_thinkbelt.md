@@ -1,6 +1,6 @@
 # DUKERIES THINKBELT
 
-<img width="320px" height="240px" alt="train_arriving" src="https://github.com/normanfellows/nf-dukeries-thinkbelt/blob/main/gifs/item_27163%20-%20view%20from%20a%20railbus.gif" />
+<img width="280px" height="210px" alt="train_arriving" src="https://github.com/normanfellows/nf-dukeries-thinkbelt/blob/main/gifs/item_27163%20-%20view%20from%20a%20railbus.gif" />
 
 ● view from a railbus, Annesley/Newstead Faculty Area
 
