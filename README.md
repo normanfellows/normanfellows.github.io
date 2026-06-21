@@ -24,6 +24,7 @@
 - [Extraterrestrial](projects/extraterrrestrial.md)
 - [IFPRI 2](projects/ifpri_2.md)
 - [Oxbridge Community College](projects/oxbridge_community_college.md)
+- [Shadow Scheme]
 
 ### Concepts
 
