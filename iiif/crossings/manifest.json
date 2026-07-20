@@ -1,1 +1,22 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://normanfellows.github.io/iiif/crossings/manifest.json",
+  "type": "Manifest",
 
+  "label": {
+    "en": [
+      "Crossings"
+    ]
+  },
+
+  "summary": {
+    "en": [
+      "A Route into Fifty Years of Architectural Inquiry."
+    ]
+  },
+
+  "items": [
+
+  ]
+
+}
