@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Norman Fellows — a public interface for architectural research, archives, and experimental publication." />
+  <title>Norman Fellows</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #111720;
+      --panel-2: #0e141c;
+      --text: #e7edf5;
+      --muted: #94a3b8;
+      --line: rgba(255, 255, 255, 0.08);
+      --accent: #6aa7ff;
+      --accent-soft: rgba(106, 167, 255, 0.12);
+      --max-width: 1120px;
+      --radius: 18px;
+      --gap: 1.25rem;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(106, 167, 255, 0.08), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .wrap {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(11, 15, 20, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .brand strong {
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    .brand span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      justify-content: flex-end;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 3rem 0 1.25rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: var(--gap);
+      align-items: start;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent), var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-pad {
+      padding: 1.35rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.05;
+      margin: 0 0 1rem;
+      max-width: 11ch;
+    }
+
+    .lede {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 58ch;
+      margin: 0;
+    }
+
+    .meta-grid {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1.2rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .meta-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .meta-item span:first-child {
+      color: var(--muted);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--text);
+      border: 1px solid rgba(106, 167, 255, 0.2);
+      font-size: 0.85rem;
+    }
+
+    .section {
+      padding: 1.25rem 0 0;
+    }
+
+    .section h2 {
+      margin: 0 0 0.9rem;
+      font-size: 1.2rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap);
+    }
+
+    .list {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.05rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--panel-2);
+    }
+
+    .item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .item small {
+      color: var(--muted);
+      white-space: nowrap;
+      align-self: start;
+    }
+
+    .links {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .link-card {
+      padding: 1rem 1.05rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--panel-2);
+    }
+
+    .link-card .title {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+      font-weight: 600;
+    }
+
+    .link-card .desc {
+      margin: 0.35rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      padding: 2.5rem 0 2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <strong>Norman Fellows</strong>
+        <span>Public interface for architectural research</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="https://github.com/normanfellows/normanfellows.github.io/blob/main/README.md">README</a>
+        <a href="https://github.com/normanfellows/normanfellows.github.io/wiki">Wiki</a>
+        <a href="https://github.com/normanfellows?tab=repositories">Repos</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#archives">Archives</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <article class="panel panel-pad">
+          <div class="eyebrow">Landing page</div>
+          <h1>A public interface into the evolving organism.</h1>
+          <p class="lede">
+            This site collects research, archives, and experimental publication formats.
+            It is intentionally minimal: an entry point, an index, and a working surface.
+          </p>
+          <div class="badge-row" aria-label="Topics">
+            <span class="badge">Architecture</span>
+            <span class="badge">Archive</span>
+            <span class="badge">Catalogue</span>
+            <span class="badge">Timeline</span>
+            <span class="badge"><a href="https://github.com/normanfellows/normanfellows.github.io/wiki">→ Wiki</a></span>
+          </div>
+        </article>
+
+        <aside class="panel panel-pad" aria-label="Site metadata">
+          <div class="eyebrow">Status</div>
+          <div class="meta-grid">
+            <div class="meta-item">
+              <span>Current mode</span>
+              <span>Provisional</span>
+            </div>
+            <div class="meta-item">
+              <span>Format</span>
+              <span>Two-column</span>
+            </div>
+            <div class="meta-item">
+              <span>Scope</span>
+              <span>Research + archive</span>
+            </div>
+            <div class="meta-item">
+              <span>Updated</span>
+              <span>Today</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    
+    <section class="section" id="start-here">
+  <div class="wrap">
+    <article class="panel panel-pad">
+      <div class="eyebrow">Start Here</div>
+
+      <h2>Enter the inquiry visually before reading it.</h2>
+
+      <p class="lede">
+        <strong>Crossings</strong> is an illustrated introduction to fifty years of
+        architectural inquiry. It provides one possible route into the archive
+        before exploring the individual projects, repositories and thesis.
+      </p>
+
+      <p>
+        This experimental IIIF publication presents three threshold moments:
+        <em>Orientation</em>, <em>Question</em> and <em>Hypothesis</em>.
+      </p>
+
+      <p>
+        <a href="https://fr.pinterest.com/untitledscrapbooks/">→ Open Scrapbbooks</a>
+      </p>
+
+    </article>
+  </div>
+</section>
+
+    <section class="section" id="work">
+      <div class="wrap two-col">
+        <article class="panel panel-pad">
+          <h2>Current work</h2>
+          <div class="list">
+            <div class="item">
+              <div>
+                <strong>GitHub Pages site</strong>
+                <p>Minimal landing page and navigation framework.</p>
+              </div>
+              <small>Active</small>
+            </div>
+            <div class="item">
+              <div>
+                <strong>Thesis archive</strong>
+                <p>Structured notes, references, and retrospective material.</p>
+              </div>
+              <small>Ongoing</small>
+            </div>
+            <div class="item">
+              <div>
+                <strong>Publication system</strong>
+                <p>Reusable page template for future repositories.</p>
+              </div>
+              <small>Building</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel panel-pad" id="projects">
+          <h2>Projects</h2>
+          <div class="links">
+            <a class="link-card" href="#">
+              <div class="title"><span>Project title</span><span>→</span></div>
+              <p class="desc">One-line summary of the repository or page.</p>
+            </a>
+            <a class="link-card" href="#">
+              <div class="title"><span>Project title</span><span>→</span></div>
+              <p class="desc">One-line summary of the repository or page.</p>
+            </a>
+            <a class="link-card" href="#">
+              <div class="title"><span>Project title</span><span>→</span></div>
+              <p class="desc">One-line summary of the repository or page.</p>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    
+
+    <section class="section" id="archives">
+      <div class="wrap two-col">
+        <article class="panel panel-pad">
+          <h2>Archives</h2>
+          <p class="lede" style="margin-top:0;">
+            Use this area for older material, source collections, bibliographic strands, and
+            any pages that belong to the longer history of the work.
+          </p>
+        </article>
+
+        <article class="panel panel-pad" id="about">
+          <h2>About</h2>
+          <p class="lede" style="margin-top:0;">
+            A short statement of position, purpose, and method. Keep it provisional. Let the page
+            remain open to revision.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Norman Fellows</span>
+      <span>GitHub Pages template</span>
+    </div>
+  </footer>
+</body>
+</html>
