@@ -9,107 +9,85 @@
 
 <style>
 
-html, body{
+html,
+body{
     margin:0;
     width:100%;
     height:100%;
 }
 
 body{
-
-    background:#d7d7d7;
+    background:#d8d4cd;
     color:#111;
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
-    font-family:-apple-system,BlinkMacSystemFont,
-    "Helvetica Neue",Helvetica,Arial,sans-serif;
-
+.wrapper{
+    height:100%;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-
 }
 
 main{
-
     text-align:center;
-    max-width:700px;
-
 }
 
 h1{
-
-    font-size:clamp(2rem,4vw,4rem);
+    margin:0;
+    font-size:clamp(2.5rem,4vw,4.5rem);
     font-weight:300;
-    letter-spacing:.03em;
-    margin:0 0 2rem 0;
-
+    letter-spacing:-0.02em;
 }
 
 p{
-
-    font-size:clamp(1rem,1.5vw,1.35rem);
+    margin-top:2.5rem;
+    font-size:clamp(1.1rem,1.6vw,1.4rem);
     font-weight:300;
-    line-height:1.7;
-    margin:0;
-
+    line-height:1.8;
 }
 
-.arrow{
+.navigation{
 
-    display:inline-block;
+    position:fixed;
 
-    margin-top:5rem;
+    left:50%;
+    bottom:60px;
 
-    text-decoration:none;
+    transform:translateX(-50%);
 
-    color:#777;
-
-    font-size:5rem;
-
-    transition:all .25s ease;
-
-}
-
-.arrow:hover{
-
-    color:#000;
-    transform:scale(1.08);
-
-}
-
-    .navigation{
-
-    margin-top:5rem;
+    width:420px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    width:320px;
-    margin-left:auto;
-    margin-right:auto;
-
 }
 
-.arrow{
+.navigation a{
 
     text-decoration:none;
 
-    color:#777;
+    color:#888;
 
     font-size:5rem;
 
-    transition:all .25s ease;
+    font-weight:300;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
 
 }
 
-.arrow:hover{
+.navigation a:hover{
 
-    color:#000;
+    color:#111;
 
     transform:scale(1.08);
 
-} 
+}
 
 </style>
 
@@ -117,39 +95,28 @@ p{
 
 <body>
 
-<main>
+<div class="wrapper">
 
-<h1>Norman Fellows</h1>
+    <main>
 
-<p>
+        <h1>Norman Fellows</h1>
 
-An independent investigation into<br>
+        <p>
+            An independent investigation into<br>
+            the changing role of architecture.
+        </p>
 
-the changing role of architecture.
-
-</p>
-
-<div class="navigation">
-
-    <a class="arrow left" href="index.html">
-        &#8249;
-    </a>
-
-    <div class="navigation">
-
-    <a class="arrow left" href="index.html">
-        &#8249;
-    </a>
-
-    <a class="arrow right" href="contents.html">
-        &#8250;
-    </a>
+    </main>
 
 </div>
 
-</div>   
+<div class="navigation">
 
-</main>
+    <a href="index.html" aria-label="Back">&#8249;</a>
+
+    <a href="contents.html" aria-label="Continue">&#8250;</a>
+
+</div>
 
 </body>
 </html>
