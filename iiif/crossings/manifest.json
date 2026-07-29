@@ -1,5 +1,6 @@
 {
   "@context": "http://iiif.io/api/presentation/3/context.json",
+
   "id": "https://normanfellows.github.io/iiif/crossings/manifest.json",
   "type": "Manifest",
 
@@ -10,13 +11,90 @@
   },
 
   "summary": {
-  "en": [
-    "An introduction to fifty years of architectural inquiry."
-  ]
-},
+    "en": [
+      "Crossing 01 – Health. A dialogue between the Medikit spread and Fantasia."
+    ]
+  },
 
   "items": [
 
-  ]
+    {
+      "id": "https://normanfellows.github.io/iiif/crossings/canvas/1",
+      "type": "Canvas",
 
+      "label": {
+        "en": [
+          "item_27193 — Medikit spread"
+        ]
+      },
+
+      "width": 1771,
+      "height": 1138,
+
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/iiif/crossings/page/1",
+          "type": "AnnotationPage",
+
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/iiif/crossings/annotation/1",
+              "type": "Annotation",
+              "motivation": "painting",
+
+              "target": "https://normanfellows.github.io/iiif/crossings/canvas/1",
+
+              "body": {
+                "id": "https://normanfellows.github.io/images/item_27193.png",
+                "type": "Image",
+                "format": "image/png",
+                "width": 1771,
+                "height": 1138
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "https://normanfellows.github.io/iiif/crossings/canvas/2",
+      "type": "Canvas",
+
+      "label": {
+        "en": [
+          "item_27195 — Fantasia"
+        ]
+      },
+
+      "width": 2789,
+      "height": 3371,
+
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/iiif/crossings/page/2",
+          "type": "AnnotationPage",
+
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/iiif/crossings/annotation/2",
+              "type": "Annotation",
+              "motivation": "painting",
+
+              "target": "https://normanfellows.github.io/iiif/crossings/canvas/2",
+
+              "body": {
+                "id": "https://normanfellows.github.io/images/item_27195.png",
+                "type": "Image",
+                "format": "image/png",
+                "width": 2789,
+                "height": 3371
+              }
+            }
+          ]
+        }
+      ]
+    }
+
+  ]
 }
