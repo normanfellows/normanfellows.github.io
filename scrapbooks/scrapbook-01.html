@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,66 +10,114 @@
 <style>
 
 :root{
+
     --bg:#ffffff;
     --text:#222;
-    --line:#d9d9d9;
     --muted:#777;
     --link:#1a36d8;
+
 }
 
 *{
+
     box-sizing:border-box;
+
 }
 
 body{
+
     margin:0;
     background:var(--bg);
     color:var(--text);
     font-family:Georgia, serif;
+
 }
 
 main{
-    max-width:1400px;
+
+    max-width:1440px;
     margin:0 auto;
-    padding:50px 60px 70px;
+    padding:48px 60px 70px;
+
 }
+
+/* -----------------------------------------
+   Navigation
+----------------------------------------- */
 
 .back{
+
     display:inline-block;
-    text-decoration:none;
+    margin-bottom:42px;
+
     color:#444;
-    font-size:28px;
-    margin-bottom:40px;
+    text-decoration:none;
+
+    font-size:30px;
+    line-height:1;
+
 }
+
+.back:hover{
+
+    color:#000;
+
+}
+
+/* -----------------------------------------
+   Heading
+----------------------------------------- */
 
 header{
+
     text-align:center;
-    margin-bottom:55px;
+    margin-bottom:46px;
+
 }
 
-header .number{
-    font-family:Arial,sans-serif;
-    font-size:13px;
-    letter-spacing:0.25em;
-    color:var(--muted);
+.number{
+
+    font-family:Arial,Helvetica,sans-serif;
     text-transform:uppercase;
-    margin-bottom:10px;
+    letter-spacing:.28em;
+
+    font-size:13px;
+    color:var(--muted);
+
+    margin-bottom:12px;
+
 }
 
-header h1{
+h1{
+
     margin:0;
-    font-size:48px;
+
+    font-size:46px;
     font-weight:normal;
+
 }
+
+.subtitle{
+
+    margin-top:12px;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    font-size:18px;
+    color:#666;
+
+}
+
+/* -----------------------------------------
+   Viewer
+----------------------------------------- */
 
 .viewer{
 
     width:80%;
-    margin:0 auto 60px;
-
     height:760px;
 
-    background:#fcfcfc;
+    margin:0 auto 44px;
 
 }
 
@@ -79,16 +128,17 @@ header h1{
 
 }
 
-#mirador{
-
-    width:100%;
-    height:100%;
-
-}
+/* -----------------------------------------
+   Continue
+----------------------------------------- */
 
 .continue{
 
     text-align:center;
+
+    margin-top:10px;
+
+    font-family:Arial,Helvetica,sans-serif;
 
 }
 
@@ -96,13 +146,35 @@ header h1{
 
     color:var(--link);
     text-decoration:none;
-    font-family:Arial,sans-serif;
+
+    font-size:18px;
 
 }
 
 .continue a:hover{
 
     text-decoration:underline;
+
+}
+
+/* -----------------------------------------
+   Responsive
+----------------------------------------- */
+
+@media (max-width:900px){
+
+    main{
+
+        padding:30px 22px 40px;
+
+    }
+
+    .viewer{
+
+        width:100%;
+        height:620px;
+
+    }
 
 }
 
@@ -114,23 +186,29 @@ header h1{
 
 <main>
 
-<a class="back" href="../propositions.html">←</a>
+<a class="back" href="../propositions.html">
+←
+</a>
 
 <header>
 
 <div class="number">
-Scrapbook 01
+SCRAPBOOK 01
 </div>
 
 <h1>
 Health
 </h1>
 
+<div class="subtitle">
+World Wide Medical System
+</div>
+
 </header>
 
 <section class="viewer">
 
-    <div id="mirador"></div>
+<div id="mirador"></div>
 
 </section>
 
@@ -146,8 +224,6 @@ Continue → Health
 
 </main>
 
-</body>
-
 <script src="https://unpkg.com/mirador@4/dist/mirador.min.js"></script>
 
 <script>
@@ -160,7 +236,9 @@ Mirador.viewer({
 
         {
 
-            manifestId: "../iiif/crossings/manifest.json"
+            manifestId: "../iiif/crossings/manifest.json",
+
+            canvasId: "https://normanfellows.github.io/iiif/crossings/canvas/1"
 
         }
 
@@ -170,4 +248,5 @@ Mirador.viewer({
 
 </script>
 
+</body>
 </html>
