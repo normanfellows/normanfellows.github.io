@@ -3,18 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Propositions</title>
+
 <style>
-:root{--bg:#d7d7d2;--window:#fff;--bar:#ececea;--text:#222;--line:#b8b8b8}
-*{box-sizing:border-box}
-body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--text)}
-main{max-width:1800px;margin:0 auto;padding:60px 40px 90px}
-.back{text-decoration:none;color:#333;font-size:1.8rem}
-h1{text-align:center;font-weight:400;letter-spacing:.28em;margin:10px 0 55px}
-.windows{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
-.window{width:310px;background:var(--window);border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.10);transition:.25s}
-.window:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(0,0,0,.14)}
-.window-header{height:34px;background:var(--bar);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 12px;color:#666;font-family:Arial,sans-serif}
+
+:root{
+    --bg:#d7d7d2;
+    --window:#fff;
+    --bar:#ececea;
+    --text:#222;
+    --line:#b8b8b8
+}
+
+*{
+    box-sizing:border-box
+}
+
+body{
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    background:var(--bg);
+    color:var(--text)
+}
+
+main{
+    max-width:1800px;
+    margin:0 auto;
+    padding:60px 40px 90px
+}
+
+.back{
+    text-decoration:none;
+    color:#333;
+    font-size:1.8rem
+}
+
+h1{
+    text-align:center;
+    font-weight:400;
+    letter-spacing:.28em;
+    margin:10px 0 45px
+}
+
+
+/* PROPOSITION */
+
+.proposition{
+    max-width:900px;
+    margin:0 auto 60px;
+    text-align:center;
+    font-size:1.05rem;
+    line-height:1.6
+}
+
+.proposition h2{
+    font-size:1.1rem;
+    font-weight:400;
+    letter-spacing:.18em;
+    margin:0 0 24px
+}
+
+.proposition p{
+    margin:0 0 18px
+}
+
+.proposition .sequence{
+    font-size:1.15rem;
+    letter-spacing:.08em;
+    margin:28px 0
+}
+
+
+/* WINDOWS */
+
+.windows{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap
+}
+
+.window{
+    width:310px;
+    background:var(--window);
+    border:1px solid var(--line);
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+    transition:.25s
+}
+
+.window:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 28px rgba(0,0,0,.14)
+}
+
+.window-header{
+    height:34px;
+    background:var(--bar);
+    border-bottom:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 12px;
+    color:#666;
+    font-family:Arial,sans-serif
+}
+
 .window-body{
     aspect-ratio:16/9;
     display:flex;
@@ -22,68 +116,185 @@ h1{text-align:center;font-weight:400;letter-spacing:.28em;margin:10px 0 55px}
     justify-content:center;
     overflow:hidden;
     color:#888;
-    font-style:italic;
+    font-style:italic
+}
+
 .window-body img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    object-position: center center;
-    display:block;
+    object-fit:contain;
+    object-position:center center;
+    display:block
 }
+
+.window-body a{
+    display:block;
+    width:100%;
+    height:100%
+}
+
 </style>
 </head>
+
+
 <body>
+
 <main>
+
 <a class="back" href="index.html">←</a>
+
 <h1>PROPOSITIONS</h1>
+
+
+<section class="proposition">
+
+<h2>ARCHITECTURE THAT PROGRESSES</h2>
+
+<p>
+Architecture may be said to be progressing when it increases the capacity
+of people and places to participate in shared systems of health, learning,
+dwelling, resources and opportunity.
+</p>
+
+<p>
+In this reading, the Commons is not an architectural type or a destination
+in itself. It is the condition towards which these capacities converge.
+</p>
+
+<p class="sequence">
+Health → Learning → Housing → Territory → Commons
+</p>
+
+<p>
+The proposition is therefore not that architecture should produce more things,
+but that it should contribute to the conditions through which things,
+knowledge, resources and opportunities can be shared.
+</p>
+
+</section>
+
+
 <section class="windows">
+
+
+<!-- READING HEALTH -->
+
 <article class="window">
-<div class="window-header"><span>≡</span><span>□</span></div>
+
+<div class="window-header">
+<span>≡</span>
+<span>□</span>
+</div>
+
 <div class="window-body">
-   <a href="reading-health/">
-    <img src="images/item_27193.png"
-         alt="Medikit spread">
+
+<a href="reading-health/">
+
+<img src="images/item_27193.png"
+     alt="Medikit spread">
+
 </a>
-</div>
-</article>
-<article class="window">
-<div class="window-header"><span>≡</span><span>□</span></div>
 
-<div class="window-body">
-    <a href="reading-learning/">
-        <img src="images/item_27205.png" alt="Reading Learning">
-    </a>
 </div>
 
 </article>
+
+
+<!-- READING LEARNING -->
+
 <article class="window">
-  <div class="window-header"><span>≡</span><span>□</span></div>
-  <div class="window-body">
-    <a href="https://normanfellows.github.io/reading-housing/">
-      <img src="images/item_27206.png" width="100%" height="auto" alt="Reading Housing">
-    </a>
-  </div>
-</article>
-    
-<article class="window">
-<div class="window-header"><span>≡</span><span>□</span></div>
+
+<div class="window-header">
+<span>≡</span>
+<span>□</span>
+</div>
+
 <div class="window-body">
+
+<a href="reading-learning/">
+
+<img src="images/item_27205.png"
+     alt="Reading Learning">
+
+</a>
+
+</div>
+
+</article>
+
+
+<!-- READING HOUSING -->
+
+<article class="window">
+
+<div class="window-header">
+<span>≡</span>
+<span>□</span>
+</div>
+
+<div class="window-body">
+
+<a href="reading-housing/">
+
+<img src="images/item_27206.png"
+     alt="Reading Housing">
+
+</a>
+
+</div>
+
+</article>
+
+
+<!-- READING TERRITORY -->
+
+<article class="window">
+
+<div class="window-header">
+<span>≡</span>
+<span>□</span>
+</div>
+
+<div class="window-body">
+
 <a href="reading-territory/">
-<img src="images/item_00003.jpg" width="100%" height="auto" 
+
+<img src="images/item_00003.jpg"
      alt="Potteries Thinkbelt territorial map">
+
 </a>
+
 </div>
+
 </article>
-    
+
+
+<!-- READING COMMONS -->
+
 <article class="window">
-<div class="window-header"><span>≡</span><span>□</span></div>
+
+<div class="window-header">
+<span>≡</span>
+<span>□</span>
+</div>
 
 <div class="window-body">
+
 <a href="reading-commons/">
+
 <img src="images/item_27212.png"
-alt="How to Change the World — opening image">
+     alt="How to Change the World — opening image">
+
 </a>
+
 </div>
 
 </article>
-</section></main></body></html>
+
+
+</section>
+
+</main>
+
+</body>
+</html>
